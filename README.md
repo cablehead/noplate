@@ -39,9 +39,9 @@ when your files are served over http.
 
 On osx you can quickly try out the noplate example by opening terminal and running:
 
-    mkdir -p /tmp/nopaste
-    cd /tmp/nopaste
-    curl -L -o nopaste.zip https://github.com/cablehead/noplate/zipball/master
+    mkdir -p /tmp/noplate
+    cd /tmp/noplate
+    curl -L -o noplate.zip https://github.com/cablehead/noplate/zipball/master
     unzip noplate
     cd cablehead*
     python -m SimpleHTTPServer 8005
