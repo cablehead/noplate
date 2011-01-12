@@ -12,7 +12,6 @@ $(function(){
             });
             var virtual = href.substr(0, href.length-5);
             $.address.value(virtual);
-            noplate_loaded();
         });
     }
 
@@ -23,5 +22,4 @@ $(function(){
 
     var initial = $.address.value().substr(1);
     if(initial) load_href(initial + '.html');
-    else noplate_loaded();
 });
