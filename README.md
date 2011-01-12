@@ -11,8 +11,8 @@ html fragraments on page load, and dynamically when an anchor tag is clicked.
 
 After an anchor tag is clicked, the url is dynamically updated with a virtual
 address using [jQuery Address](https://github.com/asual/jquery-address).  This
-enables your dynamic pages to be linked to directly, to be indexed by search
-engines and allows the browser history and reload buttons to be utilized.
+enables your dynamic pages to be linked to directly and allows the browser
+history and reload buttons to be utilized.
 
 noplate requires [jQuery](http://jquery.com/), [jQuery
 Address](https://github.com/asual/jquery-address) and the noplate js to be
