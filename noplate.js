@@ -1,5 +1,5 @@
 $(function(){
-    $('.noplate-load').click(function(){
+    $('.noplate-load').live('click', function(){
         var ob = $(this);
         $.get(ob.attr('href'), {}, function(data){
             $(ob.attr('target')).html(data);
