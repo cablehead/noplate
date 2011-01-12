@@ -12,7 +12,7 @@ anchor tag is clicked.
 
 noplate requires [jQuery](http://jquery.com/), [jQuery
 Address](https://github.com/asual/jquery-address) and the noplate js to be
-included in your html file.  For convenience a recent very of [jQuery
+included in your html file.  For convenience a recent copy of [jQuery
 Address](https://github.com/asual/jquery-address) is included in the
 repository.
 
