@@ -34,7 +34,7 @@ this div element on page load:
 
     <div id="main" class="noplate-initial" data-href="/#/home"></div>
 
-Note that the href */#/home** maps to the external fragment home.html.
+Note that the href **/#/home** maps to the external fragment home.html.
 
 To swap the contents of a placeholder dynamically, create an anchor tag with
 the class *noplate-load*, set the tags *target* element to a [jquery
