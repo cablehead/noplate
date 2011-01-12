@@ -1,8 +1,9 @@
 $(function(){
-    function load_href(s, target, set_address) {
-        $.get(s.substr(3, s.length-3) + '.html', {}, function(data){
+    function load_href(href, target, set_address) {
+        var filename = href.substr(3, href.length-3) + '.html';
+        $.get(filename, {}, function(data){
             target.html(data);
-            if(set_address) $.address.value(s.substr(3));
+            if(set_address) $.address.value(href.substr(3));
         });
     }
     $('.noplate-load').live('click', function(){
