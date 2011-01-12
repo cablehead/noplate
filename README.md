@@ -39,7 +39,7 @@ when your files are served over http.
 
 On osx you can quickly try out the noplate example by opening terminal and running:
 
-    cd mkdir -p /tmp/nopaste
+    mkdir -p /tmp/nopaste
     cd /tmp/nopaste
     curl -L -o nopaste.zip https://github.com/cablehead/noplate/zipball/master
     unzip noplate
