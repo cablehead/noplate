@@ -32,9 +32,9 @@ To load a place holder with some initial content, give an element the class
 html fragment.  For example, the following loads the contents of home.html into
 this div element on page load:
 
-    <div id="main" class="noplate-initial" data-href="/#/home"></div>
+    <div id="main" class="noplate-initial" data-href="#/home"></div>
 
-Note that the href **/#/home** maps to the external fragment home.html.
+Note that the href **#/home** maps to the external fragment home.html.
 
 To swap the contents of a placeholder dynamically, create an anchor tag with
 the class *noplate-load*, set the tags *target* element to a [jquery
@@ -42,7 +42,7 @@ selector](http://api.jquery.com/category/selectors/) which targets the
 placeholder and the tags *href* to to your html fragment which should be
 loaded.  For example:
 
-    <a class="noplate-load" target="#main" href="/#/bio">Here is my Bio</a>
+    <a class="noplate-load" target="#main" href="#/bio">Here is my Bio</a>
 
 Do to issues with most browsers handling of the [Same origin
 policy](http://en.wikipedia.org/wiki/Same_origin_policy) noplate will only work
