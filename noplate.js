@@ -1,21 +1,18 @@
 $(function(){
-    $('.noplate-load').live('click', function(){
-        var ob = $(this);
-        $.get(ob.attr('href'), {}, function(data){
-            $(ob.attr('target')).html(data);
-            $.address.value(ob.attr('href'));
+    function load_href(s, target, set_address) {
+        $.get(s.substr(3, s.length-3) + '.html', {}, function(data){
+            target.html(data);
+            if(set_address) $.address.value(s.substr(3));
         });
+    }
+    $('.noplate-load').live('click', function(){
+        load_href($(this).attr('href'), $($(this).attr('target')), true);
         return false;
     });
-
     $('.noplate-initial').each(function(){
-        var ob = $(this);
-        $.get(ob.attr('data-href'), {}, function(data){
-            ob.html(data);
-        });
+        load_href($(this).attr('data-href'), $(this), false);
     });
-
-    var page = $.address.value().substr(1);
+    var page = '/#'+$.address.value();
     if(page){
         $('a[href$="'+page+'"]').click();
     }
