@@ -48,7 +48,7 @@ Do to issues with most browsers handling of the [Same origin
 policy](http://en.wikipedia.org/wiki/Same_origin_policy) noplate will only work
 when your files are served over http.
 
-On osx you can quickly try out the noplate example by opening terminal and running:
+On OSX you can quickly try out the noplate example by opening terminal and running:
 
     mkdir -p /tmp/noplate
     cd /tmp/noplate
