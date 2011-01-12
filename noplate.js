@@ -9,9 +9,9 @@ $(function(){
         load_href($(this).attr('href'), $($(this).attr('target')), true);
         return false;
     });
-    var page = '/#'+$.address.value();
-    if(page){
-        $('a[href$="'+page+'"]').click();
+    var page = $('a[href$="'+'/#'+$.address.value()+'"]');
+    if(page.length){
+        page.click();
     } else {
         $('.noplate-initial').each(function(){
             load_href($(this).attr('data-href'), $(this), false);
