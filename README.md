@@ -10,9 +10,14 @@ placeholders.  The contents of these placeholders can be filled by external
 files which contain html fragraments on page load, and dynamically when an
 anchor tag is clicked.
 
-noplate requires jquery and the noplate js to be included in your html file:
+noplate requires [jQuery](http://jquery.com/), [jQuery
+Address](https://github.com/asual/jquery-address) and the noplate js to be
+included in your html file.  For convenience a recent very of [jQuery
+Address](https://github.com/asual/jquery-address) is included in the
+repository.
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.address.js"></script>
     <script type="text/javascript" src="noplate.js"></script>
 
 Any element targetable with a [jquery
