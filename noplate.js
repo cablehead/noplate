@@ -9,11 +9,12 @@ $(function(){
         load_href($(this).attr('href'), $($(this).attr('target')), true);
         return false;
     });
-    $('.noplate-initial').each(function(){
-        load_href($(this).attr('data-href'), $(this), false);
-    });
     var page = '/#'+$.address.value();
     if(page){
         $('a[href$="'+page+'"]').click();
+    } else {
+        $('.noplate-initial').each(function(){
+            load_href($(this).attr('data-href'), $(this), false);
+        });
     }
 });
