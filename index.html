@@ -9,11 +9,29 @@
 <h1>noplate demo</h1>
 
 <div>
-<a class="noplate-load" target="#main" href="#/home">Home</a> |
-<a class="noplate-load" target="#main" href="#/bio">Bio</a>
+<a target="_noplate" href="./">Home</a> |
+<a target="_noplate" href="bio.html">Bio</a>
 </div>
 
-<div style="margin-top:20px" id="main" class="noplate-initial" data-href="#/home"></div>
+<div style="margin-top:20px" id="main" class="noplate-block">
+<h2>The Home Page Template</h2>
+<p>You can see my Bio by clicking <a target="_noplate" href="bio.html">here</a>.</p>
+</div>
+
+<div id="leave-me-alone">
+Me alone
+</div>
+
+<div style="margin-top:20px" id="additional" class="noplate-block">
+Start
+</div>
+
+
+<script type="text/javascript">
+    function noplate_loaded() {
+        $('body').show();
+    }
+</script>
 
 </body>
 </html>

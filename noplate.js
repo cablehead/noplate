@@ -1,21 +1,27 @@
+var foo;
 $(function(){
-    function load_href(href, target, set_address) {
-        var filename = href.substr(2, href.length-2) + '.html';
-        $.get(filename, {}, function(data){
-            target.html(data);
-            if(set_address) $.address.value(href.substr(2));
+    function load_href(href) {
+        $.get(href, {}, function(data){
+            $(data).each(function(){
+                if(this.id){
+                    target = $('#'+this.id);
+                    if(target.hasClass('noplate-block')) {
+                        target.html($(this).html());
+                    }
+                }
+            });
+            var virtual = href.substr(0, href.length-5);
+            $.address.value(virtual);
+            noplate_loaded();
         });
     }
-    $('.noplate-load').live('click', function(){
-        load_href($(this).attr('href'), $($(this).attr('target')), true);
+
+    $('a[target$="_noplate"]').live('click', function(){
+        load_href($(this).attr('href'));
         return false;
     });
-    var page = $('a[href$="'+'#'+$.address.value()+'"]');
-    if(page.length){
-        page.click();
-    } else {
-        $('.noplate-initial').each(function(){
-            load_href($(this).attr('data-href'), $(this), false);
-        });
-    }
+
+    var initial = $.address.value().substr(1);
+    if(initial) load_href(initial + '.html');
+    else noplate_loaded();
 });
