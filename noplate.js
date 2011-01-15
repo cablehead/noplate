@@ -1,12 +1,15 @@
-var foo;
 $(function(){
     function load_href(href) {
         $.get(href, {}, function(data){
             $(data).each(function(){
-                if(this.id){
-                    target = $('#'+this.id);
-                    if(target.hasClass('noplate-block')) {
-                        target.html($(this).html());
+                if(this.nodeName == 'SCRIPT' && $(this).hasClass('noplate-safe')) {
+                    $('body').append(this);
+                } else {
+                    if(this.id){
+                        target = $('#'+this.id);
+                        if(target.hasClass('noplate-block')) {
+                            target.html($(this).html());
+                        }
                     }
                 }
             });
