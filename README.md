@@ -35,9 +35,11 @@ containing element of each of these blocks an id, and the class
         <p>Hi, welcome to my website.</p>
     </div>
 
-You can define any number of these blocks.  You create links to files which contain html
-fragments to fill these blocks by setting the link's target to *_noplate*.  For
-example, this is how you link to an external template *bio.html*:
+You can define any number of these blocks.
+
+You can create links to files which contain html fragments to fill these blocks
+by setting a link's target to *_noplate*.  For example, this is how you link to
+an external template *bio.html*:
 
     <a target="_noplate" href="bio.html">Bio</a>
 
