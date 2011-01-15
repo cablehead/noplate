@@ -6,13 +6,13 @@ html site, with simple template reuse, without having the run a full blown
 server side scripting solution.
 
 It allows you to define a base template, which has placeholders blocks.  The
-contents of these placeholders can be filled by external files which contain
-html fragraments dynamically.
+contents of these placeholders can be filled dynamically by external files
+which contain html fragments.
 
-Virtual addresses are maintained as links are navigated. These virual addresses
-can be linked to directly and allow the browser history and reload buttons to
-be utilized.  The linking structure is designed to be as SEO friendly as
-possible.
+Virtual addresses are maintained as links are navigated. These virtual
+addresses can be linked to directly and allow the browser history and reload
+buttons to be utilized.  The linking structure is designed to be as SEO
+friendly as possible.
 
 NoPlate requires [jQuery](http://jquery.com/), [jQuery
 Address](https://github.com/asual/jquery-address) and the noplate.js to be
@@ -27,7 +27,7 @@ To get started, create the initial landing page for your site.  Then add these h
     <script type="text/javascript" src="noplate.js"></script>
 
 Identify blocks of markup which should change as links are navigated.  Give the
-containing element of each of these blocks an id, and the the class
+containing element of each of these blocks an id, and the class
 *noplate-block*:
 
     <div id="main" class="noplate-block">
@@ -35,9 +35,9 @@ containing element of each of these blocks an id, and the the class
         <p>Hi, welcome to my website.</p>
     </div>
 
-You can define any number of these blocks.  You can then link to files which
-contain html fragments to fill these blocks by setting the links target to
-*_noplate*.  This will link to an external template *bio.html*:
+You can define any number of these blocks.  Link to files which contain html
+fragments to fill these blocks by setting the links target to *_noplate*.  This
+will link to an external template *bio.html*:
 
     <a target="_noplate" href="bio.html">Bio</a>
 
