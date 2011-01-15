@@ -36,8 +36,8 @@ containing element of each of these blocks an id, and the class
     </div>
 
 You can define any number of these blocks.  Link to files which contain html
-fragments to fill these blocks by setting the links target to *_noplate*.  This
-will link to an external template *bio.html*:
+fragments to fill these blocks by setting the links target to *_noplate*.  For
+example link to an external template *bio.html*:
 
     <a target="_noplate" href="bio.html">Bio</a>
 
