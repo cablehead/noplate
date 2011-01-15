@@ -3,7 +3,7 @@ $(function(){
         $.get(href, {}, function(data){
             $(data).each(function(){
                 if(this.nodeName == 'SCRIPT' && $(this).hasClass('noplate-safe')) {
-                    $('body').append(this);
+                    $('body').append('<script type="text/javascript">'+$(this).html()+'</script>');
                 } else {
                     if(this.id){
                         target = $('#'+this.id);
