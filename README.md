@@ -50,7 +50,12 @@ External files simply define elements with ids that match the blocks to be repla
     <h2>About Me</h2>
     </div>
 
-An that's it!
+In case someone links directly to an external file, you can place a redirect at
+the bottom of the fragment file for that page's virtual address.  Give the
+script the class *noplate-skip* so it won't be run when it's link to by
+noplate.  Here's an example for the bio page:
+
+    <script class="noplate-skip">window.location.href='./#/bio'</script>
 
 Checkout the included example.  Just watch, do to issues with
 most browsers handling of the [Same origin

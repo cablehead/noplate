@@ -16,7 +16,7 @@ $(function(){
         var stache = {};
         var scripts = [];
         $(data).each(function(){
-            if(this.nodeName == 'SCRIPT'){
+            if(this.nodeName == 'SCRIPT' && !$(this).hasClass('noplate-skip')){
                 scripts[scripts.length] = '<script type="text/javascript">'+$(this).html()+'</script>';
             } else {
                 if(this.id && this.id in noplate_blocks) {
