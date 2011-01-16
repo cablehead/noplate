@@ -7,12 +7,13 @@ server side scripting solution.
 
 It allows you to define a base template, which has placeholders blocks.  The
 contents of these placeholders can be filled dynamically by external files
-which contain html fragments.
-
-Virtual addresses are maintained as links are navigated. These virtual
-addresses can be linked to directly and allow the browser history and reload
-buttons to be utilized.  The linking structure is designed to be as SEO
-friendly as possible.
+which contain html fragments.  Virtual addresses are maintained as links are
+navigated. These virtual addresses can be linked to directly and allow the
+browser history and reload buttons to be utilized.  The linking structure is
+designed to be as SEO friendly as possible.  External fragments are cached so
+they only need to be loaded once.  You can include *<script>* snippets in
+external files.  These snippets will get rerun every time that address is
+navigated to.
 
 NoPlate requires [jQuery](http://jquery.com/), [jQuery
 Address](https://github.com/asual/jquery-address) and the noplate.js to be
