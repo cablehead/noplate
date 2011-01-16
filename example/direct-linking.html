@@ -1,0 +1,27 @@
+<div id="main">
+        <p> Virtual addresses are maintained as links are navigated.  These
+        virtual addresses can be linked to directly and allow the browser
+        history and reload buttons to be utilized.  The linking structure is
+        designed to be as SEO friendly as possible.  </p>
+
+        <p>
+        Hit your browser's refresh button to try out linking directly into the
+        virtual address for this page.
+        </p>
+
+        <p>A handy trick is to put a small bit of script at the bottom of every
+        external file which redirects to the page's virtual address.  That way
+        if someone links directly to an external file they'll be redirected to
+        see things rendered correctly.  Be sure to give the script tag for the
+        redirect the class noplate-skip, so that noplate doesn't try and run
+        the redirect when linking to it.
+        </p>
+        
+        <p>
+        If you can try and view the html for this fragment directly it'll
+        redirect to this virtual address:
+        <a href="example/direct-linking.html">example/direct-linking.html</a>
+        </p>
+</div>
+
+<script class="noplate-skip">window.location.href='../#/example/direct-linking'</script>

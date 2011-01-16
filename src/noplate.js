@@ -33,6 +33,8 @@ $(function(){
         for(var block in noplate_blocks) {
             if(block in stache) {
                 $('#'+block).html(stache[block]);
+            } else {
+                $('#'+block).html(noplate_cache['./'][block]);
             }
         }
         for(var i=0; i<stache['__noplate_scripts'].length; i++){
