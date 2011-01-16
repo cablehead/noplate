@@ -1,24 +1,50 @@
 <html>
 <head>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.address.js"></script>
-<script type="text/javascript" src="noplate.js"></script>
+<script type="text/javascript" src="example/js/jquery.address.js"></script>
+<script type="text/javascript" src="src/noplate.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="example/css/oocss/all.css" />
 </head>
 <body>
 
-<h1>NoPlate Demo</h1>
-
-<div>
-<a target="_noplate" href="./">Home</a> |
-<a target="_noplate" href="bio.html">Bio</a>
-</div>
-
-<div style="margin-top:20px" id="main" class="noplate-block">
-<h2>Home Page</h2>
-<p>Hi, welecome to my website.</p>
-<p>You can see my Bio by clicking <a target="_noplate" href="bio.html">here</a>.</p>
-</div>
 
 </div>
+
 </body>
 </html>
+
+<body> 
+<div class="page"> 
+    <div class="head"> 
+        <h2>NoPlate Demo</h2> 
+    </div> 
+    <div class="body"> 
+        <div class="leftCol"> 
+            <ul> 
+                <li><a target="_noplate" href="./">Overview</a></li>
+                <li><a target="_noplate" href="example/blocks.html">Defining Blocks</a></li>
+                <li><a target="_noplate" href="example/direct-linking.html">Direct Linking</a></li>
+                <li><a target="_noplate" href="example/caching.html">Caching</a></li>
+                <li><a target="_noplate" href="example/scripts.html">Scripts</a></li>
+            </ul> 
+        </div> 
+        <div id="right" class="rightCol gCal noplate-block"> 
+            <p>
+            Default Right
+            </p>
+        </div> 
+        <div id="main" class="main noplate-block"> 
+            <p>
+            NoPlate is a small experiment for designers who want to make a quick static
+            html site, with simple template reuse, without having the run a full blown
+            server side scripting solution.
+            </p>
+        </div> 
+    </div> 
+    <div class="foot"> 
+        <h2>Foot</h2> 
+        <p>Download from Github: <a href="https://github.com/cablehead/noplate">https://github.com/cablehead/noplate</a></p>
+    </div>  
+</div> 
+</body> 
+</html> 
