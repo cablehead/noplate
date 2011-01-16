@@ -2,7 +2,7 @@ NoPlate
 -------
 
 NoPlate is a small experiment for designers who want to make a quick static
-html site, with simple template reuse, without having the run a full blown
+html site, with simple template reuse, without having to run a full blown
 server side scripting solution.
 
 It allows you to define a base template, which has placeholders blocks.  The
