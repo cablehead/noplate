@@ -11,7 +11,7 @@ which contain html fragments.  Virtual addresses are maintained as links are
 navigated. These virtual addresses can be linked to directly and allow the
 browser history and reload buttons to be utilized.  The linking structure is
 designed to be as SEO friendly as possible.  External fragments are cached so
-they only need to be loaded once.  You can include *<script>* snippets in
+they only need to be loaded once.  You can include *&lt;script&gt;* snippets in
 external files.  These snippets will get rerun every time that address is
 navigated to.
 
