@@ -2,6 +2,7 @@ $(function(){
     var noplate_cache = {};
     var noplate_blocks = {};
     $('.noplate-block').each(function(){noplate_blocks[this.id] = 1});
+    var noplate_hacks_counter = 0;
 
     function cache_initial() {
         var stache = {}
@@ -17,7 +18,10 @@ $(function(){
         var scripts = [];
         $(data).each(function(){
             if(this.nodeName == 'SCRIPT' && !$(this).hasClass('noplate-skip')){
-                scripts[scripts.length] = '<script type="text/javascript">'+$(this).html()+'</script>';
+                var code = $(this).html();
+                // work around html5's "parser-inserted" handling
+                code += '\nvar __noplate_hacks=' + noplate_hacks_counter + ';';
+                scripts[scripts.length] = '<script type="text/javascript">'+code+'</script>';
             } else {
                 if(this.id && this.id in noplate_blocks) {
                     stache[this.id] = $(this).html();
