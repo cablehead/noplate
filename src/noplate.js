@@ -2,7 +2,6 @@ $(function(){
     var noplate_cache = {};
     var noplate_blocks = {};
     $('.noplate-block').each(function(){noplate_blocks[this.id] = 1});
-    var noplate_hacks_counter = 0;
 
     function cache_initial() {
         var stache = {}
@@ -18,11 +17,7 @@ $(function(){
         var scripts = [];
         $(data).each(function(){
             if(this.nodeName == 'SCRIPT' && !$(this).hasClass('noplate-skip')){
-                var code = $(this).html();
-                // work around html5's "parser-inserted" handling
-                code += '\nvar __noplate_hacks=' + noplate_hacks_counter + ';';
-                noplate_hacks_counter += 1;
-                scripts[scripts.length] = '<script type="text/javascript">'+code+'</script>';
+                scripts[scripts.length] = $(this).html();
             } else {
                 if(this.id && this.id in noplate_blocks) {
                     stache[this.id] = $(this).html();
@@ -43,7 +38,10 @@ $(function(){
             }
         }
         for(var i=0; i<stache['__noplate_scripts'].length; i++){
-            $('body').append(stache['__noplate_scripts'][i]);
+            var code = stache['__noplate_scripts'][i];
+            // work around html5's "parser-inserted" handling
+            code += '\nvar __noplate_hacks=' + new Date().getTime() + ';';
+            $('body').append('<script type="text/javascript">'+code+'</script>');
         }
         var virtual = href.substr(0, href.length-5);
         $.address.value(virtual);
