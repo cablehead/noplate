@@ -45,6 +45,10 @@ $(function(){
         }
         var virtual = href.substr(0, href.length-5);
         $.address.value(virtual);
+
+        /* experimental, maintain an active class on a nav */
+        $('.noplate-nav').find('li').removeClass('active');
+        $('.noplate-nav').find('a[href$="'+href+'"]').parent().addClass('active');
     }
 
     function load_href(href) {

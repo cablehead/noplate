@@ -3,19 +3,21 @@
     snippets will get rerun every time that address is 
     navigated to.
     </p>
-
-    <div id="images"></div>
-
-    <script type="text/javascript">
-    $.getJSON("http://api.flickr.com/services/feeds/groups_pool.gne?id=80641914@N00&format=json&format=json&jsoncallback=?", function(data){
-      $.each(data.items, function(i,item){
-        $("<img/>").attr("src", item.media.m).appendTo("#images")
-          .wrap("<a href='" + item.link + "'></a>");
-      });
-        $('#images').cycle({
-            fx:     'fade',
-            timeout:  2000,
-          });
-    });
-    </script>
 </div>
+
+<div id="right">
+    <div id="images"></div>
+</div>
+
+<script type="text/javascript">
+$.getJSON("http://api.flickr.com/services/feeds/groups_pool.gne?id=80641914@N00&format=json&format=json&jsoncallback=?", function(data){
+  $.each(data.items, function(i,item){
+    $("<img/>").attr("src", item.media.m).appendTo("#images")
+      .wrap("<a href='" + item.link + "'></a>");
+  });
+    $('#images').cycle({
+        fx:     'fade',
+        timeout:  2000,
+      });
+});
+</script>

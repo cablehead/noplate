@@ -4,41 +4,54 @@
 <script type="text/javascript" src="example/js/jquery.address.js"></script>
 <script type="text/javascript" src="example/js/jquery.cycle.all.min.js"></script>
 <script type="text/javascript" src="src/noplate.js"></script>
-<link rel="stylesheet" type="text/css" media="all" href="example/css/oocss/all.css" />
 <link rel="stylesheet" type="text/css" media="all" href="example/css/main.css" />
 </head>
 <body>
 <div class="page"> 
-    <div class="head"> 
-        <h2>NoPlate Demo</h2> 
-    </div> 
-    <div class="body"> 
-        <div class="leftCol gMail"> 
-            <ul> 
+
+    <div class="line">
+        <div class="unit size1of4">&nbsp;</div>
+        <div class="unit size3of4 lastUnit">
+            <h1>NoPlate <span>Demo</span></h1> 
+        </div>
+    </div>
+
+    <div class="line" style="min-height:250px"> 
+        <div class="unit size1of4"> 
+            <ul id="main-nav" class="noplate-nav"> 
                 <li><a target="_noplate" href="./">Overview</a></li>
                 <li><a target="_noplate" href="example/blocks.html">Defining Blocks</a></li>
+                <li><a target="_noplate" href="example/multiple-blocks.html">Multiple Blocks</a></li>
+                <li><a target="_noplate" href="example/virtual-addresses.html">Virtual Addresses</a></li>
                 <li><a target="_noplate" href="example/direct-linking.html">Direct Linking</a></li>
-                <li><a target="_noplate" href="example/caching.html">Caching</a></li>
+                <!--<li><a target="_noplate" href="example/caching.html">Caching</a></li>-->
                 <li><a target="_noplate" href="example/scripts.html">Scripts</a></li>
             </ul> 
         </div> 
-        <div id="right" class="rightCol gCal noplate-block"> 
-            <p>
-            Default Right
-            </p>
-        </div> 
-        <div id="main" class="main noplate-block"> 
-            <p>
-            NoPlate is a small experiment for designers who want to make a quick static
-            html site, with simple template reuse, without having to run a full blown
-            server side scripting solution.
-            </p>
-        </div> 
+
+        <div class="unit size3of4 lastUnit">
+            <div id="main" class="unit size1of2 noplate-block"> 
+                <p>
+                NoPlate is a small experiment for designers who want to make a quick static
+                html site, with simple template reuse, without having to run a full blown
+                server side scripting solution.
+                </p>
+            </div> 
+
+            <div id="right" class="unit size1of2 lastUnit noplate-block">
+                <p>
+                &nbsp;
+                </p>
+            </div> 
+        </div>
     </div> 
-    <div class="foot"> 
+
+    <div class="line">
+        <div class="unit size1of1 lastUnit">
         <h2>Foot</h2> 
         <p>Download from Github: <a href="https://github.com/cablehead/noplate">https://github.com/cablehead/noplate</a></p>
     </div>  
+
 </div> 
 </body> 
 </html> 

@@ -1,2 +1,129 @@
+/*
+Copyright (c) 2008, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 3.0.0pr2
+*/
+/* reset */
+html{color:#000;background:#FFF;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}q:before,q:after{content:'';}abbr,acronym{border:0;font-variant:normal;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}input,textarea,select{*font-size:100%;}legend{color:#000;}
+
+/* fonts */
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}
+select,input,button,textarea{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}
+pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+body, select, input, textarea {color: #444;}
+p{margin-bottom: 20px;}
+
+/* headers */
+h1,h2,h3,h4,h5,h6 { font-weight: bold; }
+
+/* nice tweaks */
+html { overflow-y: scroll; }
+
+/* links */
+a:hover, a:active { outline: none; }
+a, a:active, a:visited { color: #607890; }
+a:hover { color: #036; }
+
+/* headers */
+h1 {
+font-size: 255%%;
+font-family: "Century Schoolbook", Century, Georgia, serif;
+margin: 40px 0 20px;
+color: #666666;
+}
+
+h1 span {font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}
+
+h2 {
+font-size: 153.9%;
+font-family: "Century Schoolbook", Century, Georgia, serif;
+margin: 30px 0 20px;
+color: #666666;
+}
+
+pre { 
+  padding: 15px; 
+  
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+
+/* grid system */
+.line:after,.lastUnit:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;font-size:xx-large;content:" x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";}
+.line{*zoom:1;}
+.unit{float:left;}
+.size1of1{float:none;}
+.size1of2{width:50%;}
+.size1of3{width:33.33333%;}
+.size2of3{width:66.66666%;}
+.size1of4{width:25%;}
+.size3of4{width:75%;}
+.size1of5{width:20%;}
+.size2of5{width:40%;}
+.size3of5{width:60%;}
+.size4of5{width:80%;}
+.lastUnit{display:table-cell;float:none;width:auto;*display:block;*zoom:1;_position:relative;_left:-3px;_margin-right:-3px;}
+
+/* ====== media ====== */
+.media {margin:10px;}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.media .img {float:left; margin-right: 10px;}
+.media .img img{display:block;}
+.media .imgExt{float:right; margin-left: 10px;}
+
+/* custom styles */
 #images { height: 185px; width: 240px; padding:0; margin:0; overflow: hidden;}
 #images img { border:none;}
+
+.page { width:960px; margin-left: auto ; margin-right: auto ;}
+
+#main-nav li {
+    margin-right: 40px;
+    padding-right: 5px;
+    margin-left: 10px;
+    border-bottom: 1px solid #999999;
+    text-align: right;
+    font-size: 108%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: #fbfafc 0 1px 1px;
+}
+#main-nav li a{
+    font-family: "ar-heading", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #585652;
+    display: block;
+    text-decoration: none;
+    -webkit-transition: color 100ms linear;
+    color: #4b4946;
+    height: 30px;
+    position: relative;
+    padding-top: 5px;
+    line-height: 30px;
+}
+#main-nav li a:hover{ color: #489db4; }
+
+
+#main-nav li.active{
+    position: relative;
+    z-index: 1;
+    text-shadow: #83cbdd 0 1px 1px;
+    background-color: #489db4;
+}
+#main-nav li.active a{ color: #FFFFFF;
+}
+/* #main-nav li.active a:hover{ color: #3b8599; } */
+
+#main {
+    text-align: justify;
+    padding-right: 40px;
+}
+
+#right {
+    border-left: 1px solid #999999;
+    padding-left: 20px;
+    text-align: justify;
+}
