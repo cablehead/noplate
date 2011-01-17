@@ -21,6 +21,7 @@ $(function(){
                 var code = $(this).html();
                 // work around html5's "parser-inserted" handling
                 code += '\nvar __noplate_hacks=' + noplate_hacks_counter + ';';
+                noplate_hacks_counter += 1;
                 scripts[scripts.length] = '<script type="text/javascript">'+code+'</script>';
             } else {
                 if(this.id && this.id in noplate_blocks) {
