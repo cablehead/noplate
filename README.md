@@ -57,18 +57,4 @@ noplate.  Here's an example for the bio page:
 
     <script class="noplate-skip">window.location.href='./#/bio'</script>
 
-Checkout the included example.  Just watch, do to issues with
-most browsers handling of the [Same origin
-policy](http://en.wikipedia.org/wiki/Same_origin_policy) NoPlate will only work
-when your files are served over http.
-
-On OSX you can quickly try out the NoPlate example by opening terminal and running:
-
-    mkdir -p /tmp/noplate
-    cd /tmp/noplate
-    curl -L -o noplate.zip https://github.com/cablehead/noplate/zipball/master
-    unzip noplate
-    cd cablehead*
-    python -m SimpleHTTPServer 8005
-
-You'll now be able to view the example at: [http://localhost:8005/](http://localhost:8005/)
+Here is a [demo](http://cablehead.github.com/noplate/) for NoPlate.
