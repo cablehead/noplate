@@ -60,7 +60,7 @@ $(function(){
 
         /* ping google analyctics if an account has been set */
         /* XXX(andy) not 100% this is the right thing to ping with, still under testing */
-        if(_gaq) _gaq.push(['_trackPageview', virtual);
+        if(_gaq) _gaq.push(['_trackPageview', virtual]);
     }
 
     function load_href(href) {
