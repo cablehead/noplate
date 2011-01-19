@@ -1,3 +1,11 @@
+/*!
+ * Copyright 2011, Andy Gayton
+ * licensed under the MIT licenses.
+ * http://cablehead.github.com/noplate/MIT-LICENSE.txt
+ *
+ * Date: @DATE
+ */
+
 $(function(){
     var noplate_cache = {};
     var noplate_blocks = {};

@@ -1,9 +1,11 @@
 NoPlate
--------
+=======
 
 NoPlate is a small experiment for designers who want to make a quick static
 html site, with simple template reuse, without having to run a full blown
 server side scripting solution.
+
+Check out the hosted [demo](http://cablehead.github.com/noplate/)!
 
 It allows you to define a base template, which has placeholders blocks.  The
 contents of these placeholders can be filled dynamically by external files
@@ -57,4 +59,8 @@ noplate.  Here's an example for the bio page:
 
     <script class="noplate-skip">window.location.href='./#/bio'</script>
 
-Here is a [demo](http://cablehead.github.com/noplate/) for NoPlate.
+
+Just watch, do to issues with most browsers handling of the [Same origin
+policy](http://en.wikipedia.org/wiki/Same_origin_policy) NoPlate will only work
+when your files are served over http.
+
